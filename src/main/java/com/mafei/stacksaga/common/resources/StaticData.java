@@ -10,7 +10,7 @@ public class StaticData {
     /**
      * instance topic = [INSTANCE_TOPIC_PREFIX+server name + instance id]
      */
-    public static final String INSTANCE_TOPIC_PREFIX = "INSTANCE_";
+    public static final String INSTANCE_TOPIC_PREFIX = "INSTANCE_%s_%s";
     public final static Map<String, ServiceHealth> SERVICE_HEALTH_DATA = new HashMap<>();
 
 }
