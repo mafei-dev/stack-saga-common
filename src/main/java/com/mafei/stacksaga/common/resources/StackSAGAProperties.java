@@ -1,6 +1,8 @@
 package com.mafei.stacksaga.common.resources;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.ToString;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.validation.annotation.Validated;
@@ -37,7 +39,9 @@ public class StackSAGAProperties implements Serializable {
 
     @ToString
     @Data
-    public static class CircuitBreakerMeta {
+    @NoArgsConstructor
+    @AllArgsConstructor
+    public static class CircuitBreakerMeta implements Serializable {
         private Integer maxAttempts = 10;
         private Integer halfOpenRate = 10;
     }

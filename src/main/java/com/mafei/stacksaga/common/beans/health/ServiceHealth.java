@@ -2,17 +2,24 @@ package com.mafei.stacksaga.common.beans.health;
 
 import com.mafei.stacksaga.common.enums.ServiceHealthStatus;
 import com.mafei.stacksaga.common.resources.StackSAGAProperties;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.ToString;
+
+import java.io.Serializable;
 
 @Data
 @ToString
-public class ServiceHealth implements Cloneable {
+@NoArgsConstructor
+@AllArgsConstructor
+public class ServiceHealth implements Cloneable, Serializable {
+    private String id;
     private ServiceHealthStatus serviceHealthStatus;
     private StackSAGAProperties.CircuitBreakerMeta circuitBreakerMeta;
     private Integer failedRequestCount;
     private Integer halfOpenCount;
-    private boolean isNextRequestExecutable = true;
+    private Boolean isNextRequestExecutable = true;
 
     @Override
     public ServiceHealth clone() {
