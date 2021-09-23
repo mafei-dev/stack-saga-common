@@ -34,8 +34,15 @@ public class StackSAGAProperties implements Serializable {
     private String driverClassName;
     private String username;
     private String password;
-
     private Map<String, CircuitBreakerMeta> circuitBreakerMeta = new HashMap<>();
+
+    public void setServiceId(String serviceId) {
+        if (serviceId.startsWith("-")) {
+            this.serviceId = serviceId.substring(1);
+        } else {
+            this.serviceId = serviceId;
+        }
+    }
 
     @ToString
     @Data
