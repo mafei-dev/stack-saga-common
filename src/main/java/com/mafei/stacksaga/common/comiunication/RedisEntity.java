@@ -14,6 +14,7 @@ import java.io.Serializable;
 @JsonInclude(JsonInclude.Include.USE_DEFAULTS)
 public class RedisEntity implements Serializable {
     private RedisEvents event;
+    private String request_key = "NONE";
     private Object body;
 
     public RedisEntity() {
