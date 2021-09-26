@@ -14,6 +14,7 @@ public class StaticData {
 
     public interface Channels {
         String INSTANCE_ID_PATTERN = "%s_%s";
+        String SERVICE_PATTERN_KEY = "SERVICE_%s";
         String INSTANCE_OWN_HEALTH_REQUEST_TOPIC = "INSTANCE_" + INSTANCE_ID_PATTERN;
         String HEALTH_REQUEST_FROM_ADMIN_TOPIC = "HEALTH_REQUEST_FROM_ADMIN_TOPIC";
         String CLUSTERS_INFO_UPDATED_TOPIC = "CLUSTERS_INFO_UPDATED_TOPIC";
