@@ -17,7 +17,7 @@ public class InstanceDetail implements Serializable {
     private Long up_time;
     private Long last_updated_datetime;
     private String status;
-    private String lats_server_up_datetime;
+    private Long lats_server_up_datetime;
     // TODO: 9/18/2021 add config data each server from property file
 
     public InstanceDetail() {
