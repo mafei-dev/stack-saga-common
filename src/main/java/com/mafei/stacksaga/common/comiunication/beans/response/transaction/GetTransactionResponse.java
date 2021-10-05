@@ -12,5 +12,9 @@ import java.util.List;
 @AllArgsConstructor
 public class GetTransactionResponse implements Serializable {
     private String request_token;
-    private List<TransactionDataDTO> transactionDataList;
+    /**
+     * if success or not
+     */
+    private String status;
+    private List<AggregatorTransactionDataDTO> transactionDataList;
 }

@@ -1,10 +1,9 @@
 package com.mafei.stacksaga.common.enums;
 
-public enum RedisEvents {
+public enum WSEvent {
     NONE,
-    NEW_SERVER_UP,
     GET_TRANSACTION_REQUEST,
     GET_TRANSACTION_RESPONSE,
     GET_TRANSACTION_TRACE_REQUEST,
-    GET_TRANSACTION_TRACE_RESPONSE,
+    GET_TRANSACTION_TRACE_RESPONSE
 }

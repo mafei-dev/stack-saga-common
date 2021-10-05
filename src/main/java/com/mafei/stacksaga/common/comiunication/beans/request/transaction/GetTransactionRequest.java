@@ -10,10 +10,9 @@ import java.io.Serializable;
 @NoArgsConstructor
 @AllArgsConstructor
 public class GetTransactionRequest implements Serializable {
-    private String request_token;
-    private String response_topic;
+    private String instance_id;
     private String service_group;
+    private String tx_status;
     private String from;
     private String to;
-    private Boolean for_all_date;
 }

@@ -2,6 +2,7 @@ package com.mafei.stacksaga.common.resources;
 
 import com.mafei.stacksaga.common.beans.health.ServiceHealth;
 
+import java.text.SimpleDateFormat;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -11,6 +12,7 @@ public class StaticData {
      * instance topic = [INSTANCE_TOPIC_PREFIX+server name + instance id]
      */
     public final static Map<String, ServiceHealth> SERVICE_HEALTH_DATA = new HashMap<>();
+    public final static SimpleDateFormat STACK_SAGA_DATE_TIME_FORMAT = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
 
     public interface Channels {
         String INSTANCE_ID_PATTERN_FORMATTER = "%s_%s";
