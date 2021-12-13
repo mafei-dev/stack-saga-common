@@ -19,6 +19,8 @@ public class RedisEntity implements Serializable {
     private String instance_id;
     private String request_key = "NONE";
     private Object body;
+    private String response_status;
+
 
     public RedisEntity() {
     }
