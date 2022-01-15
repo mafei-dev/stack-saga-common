@@ -19,6 +19,13 @@ public class InstanceDetail implements Serializable {
     private String status;
     private Long lats_server_up_datetime;
     // TODO: 9/18/2021 add config data each server from property file
+    /**
+     * if it is a refresh, there shou have a refresh key.
+     * that means it is being happened by an admin request.
+     * otherwise, it is the naturel publish
+     */
+    private Boolean is_refresh;
+    private String refresh_token;
 
     public InstanceDetail() {
     }

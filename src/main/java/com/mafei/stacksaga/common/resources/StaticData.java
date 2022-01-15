@@ -3,6 +3,7 @@ package com.mafei.stacksaga.common.resources;
 import com.mafei.stacksaga.common.beans.health.ServiceHealth;
 
 import java.text.SimpleDateFormat;
+import java.time.Duration;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -13,6 +14,7 @@ public class StaticData {
      */
     public final static Map<String, ServiceHealth> SERVICE_HEALTH_DATA = new HashMap<>();
     public final static SimpleDateFormat STACK_SAGA_DATE_TIME_FORMAT = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
+    public final static Long EXTRA_EXPIRE_TIME = Duration.ofSeconds(30).toMillis();
 
     public interface Channels {
         String INSTANCE_ID_PATTERN_FORMATTER = "%s_%s";
@@ -31,6 +33,15 @@ public class StaticData {
         String PRIMARY_SERVICE_KEY = "PRIMARY_SERVICE";
         String HEALTH_REFRESH_REQUEST_EVENT = "HEALTH_REFRESH_REQUEST_EVENT";
         String HEALTH_REFRESH_RESPONSE_EVENT = "HEALTH_REFRESH_RESPONSE_EVENT";
+        String ADMIN_COMMANDS = "ADMIN_COMMANDS";
+        String ADMIN_SERVER_KEY = "ADMIN_SERVER_DETAILS";
+
+    }
+
+    public enum AdminCommands {
+        DISABLE_CB,
+        ENABLE_CB,
+        REFRESH_STATUS,
     }
 
 }

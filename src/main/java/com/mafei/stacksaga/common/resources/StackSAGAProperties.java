@@ -5,14 +5,17 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.validation.annotation.Validated;
 
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
+import java.time.Duration;
 import java.util.HashMap;
 import java.util.Map;
 
 @Validated
+@Configuration
 @ConfigurationProperties(prefix = "stacksaga")
 @ToString
 @Data
@@ -24,6 +27,7 @@ public class StackSAGAProperties implements Serializable {
     private String serviceId;
     @NotNull(message = "The component scan path(s) is required.")
     private String[] componentScan;
+    private Long liveUpdate;
     private boolean showStartUpSummary = true;
     private boolean showStartUpConfiguredSteps = true;
     private boolean showTransactionSummary = true;
