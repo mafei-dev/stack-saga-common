@@ -42,7 +42,7 @@ public class StackSAGAProperties implements Serializable {
 
     public void setServiceId(String serviceId) {
         if (serviceId.startsWith("-")) {
-            this.serviceId = serviceId.substring(1);
+    this.serviceId = serviceId.substring(1);
         } else {
             this.serviceId = serviceId;
         }
