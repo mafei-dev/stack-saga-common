@@ -26,6 +26,7 @@ public class InstanceDetail implements Serializable {
      */
     private Boolean is_refresh;
     private String refresh_token;
+    private Long count;
 
     public InstanceDetail() {
     }
